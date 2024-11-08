@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>finalement</title>
+</head>
+<body>
+   
+   
+   <form id="articleForm">
+      
+      
+      <input type="text" id="title" placeholder="Titre" required>
+       
+       
+       <input type="text" id="address" placeholder="Adresse" required>
+      
+      
+      <textarea id="description" placeholder="Description" required></textarea>
+       
+       
+       <button type="submit">Submit</button>
+   
+   
+   </form>
+
+ 
+ 
+ <div id="articlesContainer"></div>
+<h2>The backgroundColor Property</h2>
+
+<button type="button" onclick="myFunction()">enzel all felsa ;)</button>
+    
+    
+    <script>
+    
+    
+    
+    
+    document.getElementById('articleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+
+
+            const titre = document.getElementById('title').value;
+           
+           
+           
+           const adresse = document.getElementById('address').value;
+           
+           
+           const description = document.getElementById('description').value;
+
+
+
+
+            const article = document.createElement('article');
+            article.innerHTML = `<h3>${titre}</h3><p>${adresse}</p><p>${description}</p>`;
+
+
+
+
+
+            document.getElementById('articlesContainer').appendChild(article);
+            });
+    
+    
+    
+    
+    
+    function myFunction() {
+  document.body.style.backgroundColor = "purple";
+}
+    
+    
+    
+    
+    
+    
+    </script>
+
+</body>
+</html>
